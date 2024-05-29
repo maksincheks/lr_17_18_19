@@ -85,6 +85,8 @@ begin
   r:= r * 2;
 end;
 
+
+//удвоение по ссылке
 procedure TfMain.Button3Click(Sender: TObject);
 var
   myReal: real;

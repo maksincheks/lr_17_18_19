@@ -89,10 +89,6 @@ object fMain: TfMain
     Height = 66
     Top = 66
     Width = 113
-    Lines.Strings = (
-      'Memo1'
-    )
     TabOrder = 7
-    Visible = False
   end
 end

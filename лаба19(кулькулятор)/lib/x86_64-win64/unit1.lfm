@@ -1,22 +1,23 @@
 object Form1: TForm1
-  Left = 187
-  Height = 389
-  Top = 186
-  Width = 386
+  Left = 432
+  Height = 484
+  Top = 236
+  Width = 482
   Caption = 'Калькулятор'
-  ClientHeight = 389
-  ClientWidth = 386
+  ClientHeight = 484
+  ClientWidth = 482
   Color = clSilver
-  LCLVersion = '2.0.12.0'
+  DesignTimePPI = 120
+  LCLVersion = '3.2.0.0'
   object txtDisplay: TEdit
-    Left = 8
-    Height = 45
-    Top = 16
-    Width = 368
+    Left = 10
+    Height = 54
+    Top = 20
+    Width = 460
     Alignment = taRightJustify
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -24,379 +25,379 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 0
     Text = '0'
+    OnKeyPress = txtDisplayKeyPress
   end
-  object Button1: TButton
-    Left = 8
-    Height = 48
-    Top = 72
-    Width = 136
+  object BackSpace: TButton
+    Left = 10
+    Height = 60
+    Top = 90
+    Width = 170
     Caption = '<-'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button1Click
     ParentFont = False
     TabOrder = 1
   end
-  object Button2: TButton
-    Left = 320
-    Height = 112
-    Top = 264
-    Width = 56
+  object Equally: TButton
+    Left = 400
+    Height = 140
+    Top = 330
+    Width = 70
     Caption = '='
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button2Click
     ParentFont = False
     TabOrder = 2
+    OnClick = EquallyClick
   end
-  object Button3: TButton
-    Left = 8
-    Height = 48
-    Top = 136
-    Width = 56
+  object Num7: TButton
+    Left = 10
+    Height = 60
+    Top = 170
+    Width = 70
     Caption = '7'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button3Click
     ParentFont = False
     TabOrder = 3
+    OnClick = Num7Click
   end
-  object Button4: TButton
-    Left = 88
-    Height = 48
-    Top = 136
-    Width = 56
+  object Num8: TButton
+    Left = 110
+    Height = 60
+    Top = 170
+    Width = 70
     Caption = '8'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button4Click
     ParentFont = False
     TabOrder = 4
+    OnClick = Num8Click
   end
-  object Button5: TButton
-    Left = 168
-    Height = 48
-    Top = 136
-    Width = 56
+  object Num9: TButton
+    Left = 210
+    Height = 60
+    Top = 170
+    Width = 70
     Caption = '9'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button5Click
     ParentFont = False
     TabOrder = 5
+    OnClick = Num9Click
   end
-  object Button6: TButton
-    Left = 8
-    Height = 48
-    Top = 200
-    Width = 56
+  object Num4: TButton
+    Left = 10
+    Height = 60
+    Top = 250
+    Width = 70
     Caption = '4'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button6Click
     ParentFont = False
     TabOrder = 6
+    OnClick = Num4Click
   end
-  object Button7: TButton
-    Left = 88
-    Height = 48
-    Top = 200
-    Width = 56
+  object Num5: TButton
+    Left = 110
+    Height = 60
+    Top = 250
+    Width = 70
     Caption = '5'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button7Click
     ParentFont = False
     TabOrder = 7
+    OnClick = Num5Click
   end
-  object Button8: TButton
-    Left = 168
-    Height = 48
-    Top = 200
-    Width = 56
+  object Num6: TButton
+    Left = 210
+    Height = 60
+    Top = 250
+    Width = 70
     Caption = '6'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button8Click
     ParentFont = False
     TabOrder = 8
+    OnClick = Num6Click
   end
-  object Button9: TButton
-    Left = 8
-    Height = 48
-    Top = 264
-    Width = 56
+  object Num1: TButton
+    Left = 10
+    Height = 60
+    Top = 330
+    Width = 70
     Caption = '1'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button9Click
     ParentFont = False
     TabOrder = 9
+    OnClick = Num1Click
   end
-  object Button10: TButton
-    Left = 88
-    Height = 48
-    Top = 264
-    Width = 56
+  object Num2: TButton
+    Left = 110
+    Height = 60
+    Top = 330
+    Width = 70
     Caption = '2'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button10Click
     ParentFont = False
     TabOrder = 10
+    OnClick = Num2Click
   end
-  object Button11: TButton
-    Left = 168
-    Height = 48
-    Top = 264
-    Width = 56
+  object Num3: TButton
+    Left = 210
+    Height = 60
+    Top = 330
+    Width = 70
     Caption = '3'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button11Click
     ParentFont = False
     TabOrder = 11
+    OnClick = Num3Click
   end
-  object Button12: TButton
-    Left = 168
-    Height = 48
-    Top = 328
-    Width = 56
+  object comma: TButton
+    Left = 210
+    Height = 60
+    Top = 410
+    Width = 70
     Caption = ','
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button12Click
     ParentFont = False
     TabOrder = 12
+    OnClick = commaClick
   end
-  object Button13: TButton
-    Left = 8
-    Height = 48
-    Top = 328
-    Width = 136
+  object Num0: TButton
+    Left = 10
+    Height = 60
+    Top = 410
+    Width = 170
     Caption = '0'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button13Click
     ParentFont = False
     TabOrder = 13
+    OnClick = Num0Click
   end
-  object Button14: TButton
-    Left = 248
-    Height = 48
-    Top = 328
-    Width = 56
+  object Plus: TButton
+    Left = 310
+    Height = 60
+    Top = 410
+    Width = 70
     Caption = '+'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button14Click
     ParentFont = False
     TabOrder = 14
+    OnClick = PlusClick
   end
-  object Button15: TButton
-    Left = 248
-    Height = 48
-    Top = 264
-    Width = 56
+  object Minus: TButton
+    Left = 310
+    Height = 60
+    Top = 330
+    Width = 70
     Caption = '-'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button15Click
     ParentFont = False
     TabOrder = 15
+    OnClick = MinusClick
   end
-  object Button16: TButton
-    Left = 248
-    Height = 48
-    Top = 200
-    Width = 56
+  object multiplic: TButton
+    Left = 310
+    Height = 60
+    Top = 250
+    Width = 70
     Caption = '*'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button16Click
     ParentFont = False
     TabOrder = 16
+    OnClick = multiplicClick
   end
-  object Button17: TButton
-    Left = 248
-    Height = 48
-    Top = 136
-    Width = 56
+  object divison: TButton
+    Left = 310
+    Height = 60
+    Top = 170
+    Width = 70
     Caption = '/'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button17Click
     ParentFont = False
     TabOrder = 17
+    OnClick = divisonClick
   end
-  object Button18: TButton
-    Left = 168
-    Height = 48
-    Top = 72
-    Width = 56
+  object clear_sec: TButton
+    Left = 210
+    Height = 60
+    Top = 90
+    Width = 70
     Caption = 'ce'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button18Click
     ParentFont = False
     TabOrder = 18
+    OnClick = clear_secClick
   end
-  object Button19: TButton
-    Left = 248
-    Height = 48
-    Top = 72
-    Width = 56
+  object clear: TButton
+    Left = 310
+    Height = 60
+    Top = 90
+    Width = 70
     Caption = 'c'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button19Click
     ParentFont = False
     TabOrder = 19
+    OnClick = clearClick
   end
-  object Button20: TButton
-    Left = 320
-    Height = 48
-    Top = 200
-    Width = 56
+  object divison_1_x: TButton
+    Left = 400
+    Height = 60
+    Top = 250
+    Width = 70
     Caption = '1/x'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button20Click
     ParentFont = False
     TabOrder = 20
+    OnClick = divison_1_xClick
   end
-  object Button21: TButton
-    Left = 320
-    Height = 48
-    Top = 136
-    Width = 56
+  object square: TButton
+    Left = 400
+    Height = 60
+    Top = 170
+    Width = 70
     Caption = 'x^2'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button21Click
     ParentFont = False
     TabOrder = 21
+    OnClick = squareClick
   end
-  object Button22: TButton
-    Left = 320
-    Height = 48
-    Top = 72
-    Width = 56
+  object sqrttt: TButton
+    Left = 400
+    Height = 60
+    Top = 90
+    Width = 70
     Caption = 'Кор'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Color = clBlack
-    Font.Height = -27
+    Font.Height = -34
     Font.Name = 'Segoe UI'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
-    OnClick = Button22Click
     ParentFont = False
     TabOrder = 22
+    OnClick = sqrtttClick
   end
 end
